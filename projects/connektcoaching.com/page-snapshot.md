@@ -1,0 +1,278 @@
+- generic [ref=e2]:
+  - alert [ref=e3]: The Ca$hMail™ Workshop | Write Emails That Print Clients
+  - generic [ref=e6]:
+    - generic: 
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - generic [ref=e26]:
+          - heading "Make Ca$hMail™ Daily" [level=1] [ref=e30]
+          - heading "Write Emails That Print Clients" [level=1] [ref=e34]
+        - generic [ref=e42]:
+          - heading "Most NLP Trainers are grinding out reels nobody watches and long-form posts that land in silence." [level=1] [ref=e46]
+          - heading "Meanwhile, the coaches who've learned this framework are making tens of thousands from a single daily email. No dancing. No AI slop. No chasing." [level=1] [ref=e50]
+          - heading "This free live workshop shows you exactly how." [level=1] [ref=e54]
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: "6"
+            - generic [ref=e65]: days
+          - generic [ref=e66]:
+            - generic [ref=e67]: "9"
+            - generic [ref=e68]: hours
+          - generic [ref=e69]:
+            - generic [ref=e70]: "46"
+            - generic [ref=e71]: minutes
+          - generic [ref=e72]:
+            - generic [ref=e73]: "11"
+            - generic [ref=e74]: seconds
+        - generic [ref=e78]:
+          - button "CLAIM YOUR FREE SEAT" [ref=e80] [cursor=pointer]:
+            - generic [ref=e81]:
+              - generic [ref=e82]: 
+              - generic [ref=e83]: CLAIM YOUR FREE SEAT
+          - generic [ref=e85]:
+            - generic [ref=e87]:
+              - heading "DATE" [level=2] [ref=e91]:
+                - strong [ref=e92]: DATE
+              - heading "ONLINE VIA ZOOM" [level=2] [ref=e96]
+            - generic [ref=e98]:
+              - heading "LIVE SESSION" [level=2] [ref=e102]:
+                - strong [ref=e103]: LIVE SESSION
+              - heading "June 4th, 7:30pm AEST" [level=2] [ref=e107]
+            - generic [ref=e109]:
+              - heading "INVESTMENT" [level=2] [ref=e113]:
+                - strong [ref=e114]: INVESTMENT
+              - heading "FREE" [level=2] [ref=e118]:
+                - strong [ref=e119]: FREE
+      - generic [ref=e121]:
+        - generic [ref=e125]:
+          - heading "THE PROBLEM" [level=2] [ref=e129]:
+            - strong [ref=e130]: THE PROBLEM
+          - generic [ref=e133]:
+            - heading "You're Not New to This." [level=1] [ref=e134]:
+              - strong [ref=e135]: You're Not New to This.
+            - heading "But Your Emails Aren't Converting." [level=1] [ref=e136]:
+              - strong [ref=e137]: But Your Emails Aren't Converting.
+          - heading "You've got a list. A business. Brilliance that's worth sharing and a body of work that genuinely changes people." [level=1] [ref=e141]
+        - generic [ref=e151]:
+          - generic [ref=e153]:
+            - heading "BUT YOUR EMAILS RIGHT NOW..." [level=2] [ref=e157]:
+              - text: 
+              - strong [ref=e158]: BUT YOUR EMAILS RIGHT NOW...
+            - list [ref=e162]:
+              - listitem [ref=e163]:
+                - paragraph [ref=e164]: Get opened and ignored
+            - list [ref=e171]:
+              - listitem [ref=e172]:
+                - paragraph [ref=e173]: Sound good to you and convert nobody
+            - list [ref=e180]:
+              - listitem [ref=e181]:
+                - paragraph [ref=e182]: Over-explain everything and still don't land
+            - paragraph [ref=e186]
+          - generic [ref=e188]:
+            - heading "The real reason" [level=1] [ref=e192]:
+              - text: 
+              - strong [ref=e193]: The real reason
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - paragraph [ref=e199]: It's not your writing.
+            - list [ref=e206]:
+              - listitem [ref=e207]:
+                - paragraph [ref=e208]: It's not your offer.
+            - list [ref=e215]:
+              - listitem [ref=e216]:
+                - paragraph [ref=e217]: It's not your list.
+            - list [ref=e224]:
+              - listitem [ref=e225]:
+                - paragraph [ref=e226]: Nobody taught you the one thing underneath every email that actually converts — a psychological frame.
+      - generic [ref=e228]:
+        - generic [ref=e232]:
+          - heading "What You'll Learn" [level=1] [ref=e236]:
+            - strong [ref=e237]: What You'll Learn
+          - generic [ref=e240]:
+            - heading "Four Moves That Change" [level=1] [ref=e241]:
+              - strong [ref=e242]: Four Moves That Change
+            - heading "Every Email You Write." [level=1] [ref=e243]:
+              - strong [ref=e244]: Every Email You Write.
+        - generic [ref=e250]:
+          - generic [ref=e252]:
+            - heading [level=1] [ref=e256]
+            - heading "01" [level=1] [ref=e260]:
+              - strong [ref=e261]: "01"
+            - heading "Choose the Frame First" [level=1] [ref=e265]:
+              - strong [ref=e266]: Choose the Frame First
+            - heading "Choose the psychological frame before you write a single word." [level=1] [ref=e270]
+            - heading [level=2] [ref=e274]
+          - generic [ref=e276]:
+            - heading [level=1] [ref=e280]
+            - heading "02" [level=1] [ref=e284]:
+              - strong [ref=e285]: "02"
+            - heading "Open the Loop" [level=1] [ref=e289]:
+              - strong [ref=e290]: Open the Loop
+            - heading "Open a loop in line 2 that holds your reader hostage until the CTA." [level=1] [ref=e294]
+            - heading [level=2] [ref=e298]
+          - generic [ref=e300]:
+            - heading [level=1] [ref=e304]
+            - heading "03" [level=1] [ref=e308]:
+              - strong [ref=e309]: "03"
+            - heading "Embed the Proof" [level=1] [ref=e313]:
+              - strong [ref=e314]: Embed the Proof
+            - heading "Embed proof inside a story so it lands as evidence, not a sales pitch." [level=1] [ref=e318]
+            - heading [level=2] [ref=e322]
+          - generic [ref=e324]:
+            - heading [level=1] [ref=e328]
+            - heading "04" [level=1] [ref=e332]:
+              - strong [ref=e333]: "04"
+            - heading "Close with a Trigger" [level=1] [ref=e337]:
+              - strong [ref=e338]: Close with a Trigger
+            - heading "Close with one trigger word that gets replies without a follow-up in sight." [level=1] [ref=e342]
+            - heading [level=2] [ref=e346]
+        - generic [ref=e353]:
+          - heading "Your next email doesn't just get read. It starts conversations. It creates enrollment moments." [level=1] [ref=e354]
+          - heading "That's the shift." [level=1] [ref=e355]:
+            - strong [ref=e356]: That's the shift.
+      - generic [ref=e358]:
+        - generic [ref=e362]:
+          - heading "The Method" [level=1] [ref=e366]:
+            - strong [ref=e367]: The Method
+          - heading "The C.L.O.S.E. Framework™" [level=1] [ref=e371]:
+            - strong [ref=e372]: The C.L.O.S.E. Framework™
+          - heading "A 5-phase system built from inside the NLP world. Not templates. Not \"value emails.\" Not corporate marketing theory borrowed from a different industry." [level=1] [ref=e376]
+        - generic [ref=e382]:
+          - generic [ref=e384]:
+            - heading "14 Psychological Frames" [level=1] [ref=e388]:
+              - text: 
+              - strong [ref=e389]: 14 Psychological Frames
+            - heading "14 psychological frames — each one engineered to move a specific reader state toward a decision." [level=1] [ref=e393]
+          - generic [ref=e395]:
+            - heading "Structured Email Flow" [level=1] [ref=e399]:
+              - text: 
+              - strong [ref=e400]: Structured Email Flow
+            - heading "A structured email flow — because the architecture is built on how decisions are actually made." [level=1] [ref=e404]
+          - generic [ref=e406]:
+            - heading "Built for Your World" [level=1] [ref=e410]:
+              - text: 
+              - strong [ref=e411]: Built for Your World
+            - heading "Built for high-trust, high-ticket conversations with the exact audience you're already talking to." [level=1] [ref=e415]
+        - heading "Every email that converts follows this architecture. We'll walk through every phase live and show you how to apply it to an email you can send the same week." [level=1] [ref=e423]
+        - generic [ref=e427]:
+          - button "CLAIM YOUR FREE SEAT" [ref=e429] [cursor=pointer]:
+            - generic [ref=e430]:
+              - generic [ref=e431]: 
+              - generic [ref=e432]: CLAIM YOUR FREE SEAT
+          - heading "Free live workshop — limited spots available" [level=1] [ref=e436]
+      - generic [ref=e438]:
+        - generic [ref=e442]:
+          - heading "PROOF" [level=1] [ref=e446]:
+            - strong [ref=e447]: PROOF
+          - heading "THIS ISN't THEORY." [level=1] [ref=e451]:
+            - strong [ref=e452]: THIS ISN't THEORY.
+        - generic [ref=e463]:
+          - heading "This is the exact strategy Conor and I used to generate over $100,000 in a single campaign — and hundreds of thousands since the day we started deploying it." [level=1] [ref=e464]
+          - heading [level=1] [ref=e465]
+          - heading "CONNEKTU members who've taken this and run their own campaigns have made tens of thousands using nothing more than this framework and a daily email." [level=1] [ref=e466]:
+            - strong [ref=e467]: CONNEKTU members
+            - text: who've taken this and run their own campaigns have made tens of thousands using nothing more than this framework and a daily email.
+          - heading [level=1] [ref=e468]
+          - heading "Lucy ran one campaign using this exact method. Made tens of thousands from it." [level=1] [ref=e469]
+          - heading [level=1] [ref=e470]
+          - heading "One framework. One email a day. The difference that makes all the difference." [level=1] [ref=e471]
+      - generic [ref=e473]:
+        - generic [ref=e477]:
+          - heading "What You Walk Away With" [level=1] [ref=e481]:
+            - strong [ref=e482]: What You Walk Away With
+          - heading "PLUS, YOU GET ALL OF THESE." [level=1] [ref=e486]:
+            - strong [ref=e487]: PLUS, YOU GET ALL OF THESE.
+        - generic [ref=e495]:
+          - generic [ref=e498]:
+            - heading "After this session you'll know how to write emails that feel natural and convert. Structure every email with intention before you open a blank page. Turn a list of subscribers into actual enrolment conversations. Stop sending content and start creating positioning." [level=1] [ref=e499]
+            - heading [level=1] [ref=e500]
+            - heading "You'll also leave with the tools to do it." [level=1] [ref=e501]
+            - heading [level=1] [ref=e502]
+          - heading "BONUSES (all included, free):" [level=1] [ref=e506]:
+            - strong [ref=e507]: "BONUSES (all included, free):"
+        - generic [ref=e509]:
+          - heading "01" [level=2] [ref=e515]
+          - heading "The C.L.O.S.E. Framework™ Swipe Sheet" [level=1] [ref=e521]:
+            - text: The
+            - strong [ref=e522]: C.L.O.S.E. Framework™
+            - text: Swipe Sheet
+        - generic [ref=e524]:
+          - heading "02" [level=2] [ref=e530]
+          - heading "The 14 Psychological Frames Reference Card" [level=1] [ref=e536]
+        - generic [ref=e538]:
+          - heading "03" [level=2] [ref=e544]
+          - heading "The Email Planning Canvas" [level=1] [ref=e550]
+        - generic [ref=e552]:
+          - heading "04" [level=2] [ref=e558]
+          - generic [ref=e560]:
+            - heading "Live Hot Seat Q&A with Kallum" [level=1] [ref=e564]
+            - heading "— bring your next email and we'll work through it together" [level=1] [ref=e568]
+      - generic [ref=e570]:
+        - generic [ref=e574]:
+          - heading "WORKSHOP DETAILS" [level=2] [ref=e578]:
+            - strong [ref=e579]: WORKSHOP DETAILS
+          - heading "June 4, 2026 at 7:30 PM (AEST)" [level=1] [ref=e583]:
+            - strong [ref=e584]: June 4, 2026 at 7:30 PM (AEST)
+        - generic [ref=e592]:
+          - heading "THIS IS A LIVE WORKSHOP" [level=2] [ref=e596]:
+            - strong [ref=e597]: THIS IS A LIVE WORKSHOP
+          - generic [ref=e600]:
+            - heading "There's a 48-hour replay window for registrants. After that it's gone — no archive, no library, no \"catch it later.\"" [level=1] [ref=e601]
+            - heading [level=1] [ref=e602]
+            - heading "The kernels don't all pop at the same time. But when it's your turn, you'll know." [level=1] [ref=e603]
+        - generic [ref=e605]:
+          - generic [ref=e607]:
+            - heading "🇺🇸 US East Coast. 5:30 AM EDT (June 4)" [level=2] [ref=e611]
+            - heading "🇦🇪 UAE 1:30 PM GST (June 4)" [level=2] [ref=e615]
+          - generic [ref=e617]:
+            - heading "🇺🇸 US West Coast 2:30 AM PDT (June 4)" [level=2] [ref=e621]
+            - heading "🇸🇬 Singapore 5:30 PM SGT (June 4)" [level=2] [ref=e625]
+          - generic [ref=e627]:
+            - heading "🇬🇧 London 10:30 AM BST (June 4)" [level=2] [ref=e631]
+            - heading "🇦🇺 Australia 7:30 PM AEST (June 4)" [level=2] [ref=e635]
+      - generic [ref=e641]:
+        - generic [ref=e644]:
+          - heading "Your Emails Are Getting Opened" [level=1] [ref=e645]:
+            - strong [ref=e646]: Your Emails Are Getting Opened
+          - heading "But Not Converting" [level=1] [ref=e647]
+        - heading "This is where that changes." [level=1] [ref=e651]:
+          - strong [ref=e652]: This is where that changes.
+        - heading [level=1] [ref=e656]
+        - button "CLAIM YOUR FREE SEAT" [ref=e658] [cursor=pointer]:
+          - generic [ref=e659]:
+            - generic [ref=e660]: 
+            - generic [ref=e661]: CLAIM YOUR FREE SEAT
+        - heading "Free live workshop — limited spots available" [level=1] [ref=e665]
+      - generic [ref=e667]:
+        - generic [ref=e671]:
+          - heading "CONNEKTU MEMBERS (INSIDER ACCESS)" [level=1] [ref=e675]:
+            - strong [ref=e676]: CONNEKTU MEMBERS (INSIDER ACCESS)
+          - generic [ref=e679]:
+            - heading "Inside ConnektU," [level=1] [ref=e680]:
+              - strong [ref=e681]: Inside ConnektU,
+            - heading "This Goes Further." [level=1] [ref=e682]:
+              - strong [ref=e683]: This Goes Further.
+        - generic [ref=e694]:
+          - heading "You don't just learn the framework — you get the full email example library." [level=2] [ref=e695]
+          - heading [level=2] [ref=e696]
+          - heading "Real campaigns, mapped to every frame, with copy-level annotation showing exactly why each line works." [level=2] [ref=e697]
+          - heading [level=2] [ref=e698]
+          - heading "The Email Command Centre tool." [level=2] [ref=e699]
+          - heading [level=2] [ref=e700]
+          - heading "Ongoing refinement and live feedback on your own campaigns. This is where emails stop being a guess and start being a system." [level=2] [ref=e701]:
+            - generic [ref=e702]:
+              - text: Ongoing refinement and live feedback on your own campaigns.
+              - text: This is where emails stop being a guess and start being a system.
+          - heading [level=2] [ref=e703]
+          - heading "The workshop gives you the framework. CONNEKTU gives you the machine." [level=2] [ref=e704]:
+            - strong [ref=e705]:
+              - emphasis [ref=e706]: The workshop gives you the framework. CONNEKTU gives you the machine.
+      - generic [ref=e723]:
+        - paragraph [ref=e724]: © 2026 Connekt Coaching | SalesFluence™
+        - paragraph [ref=e725]
+        - paragraph [ref=e726]:
+          - link "Terms and Conditions" [ref=e727] [cursor=pointer]:
+            - /url: https://www.connektcoaching.com.au/terms-conditions/
+          - text: "|"
+          - link "Privacy" [ref=e728] [cursor=pointer]:
+            - /url: https://www.connektcoaching.com.au/privacy-policy/

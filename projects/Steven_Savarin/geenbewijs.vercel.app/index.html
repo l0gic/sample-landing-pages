@@ -5,19 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GeenBewijs.nl — Rijbewijs ingevorderd? Binnen 24 uur actie.</title>
   <meta name="description" content="Gespecialiseerde verkeersrechtadvocaat voor het terugkrijgen van ingevorderde rijbewijzen. Snel, transparant en resultaatgericht." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Fonts self-hosted (identical to original) -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalService","name":"GeenBewijs.nl","url":"https://www.geenbewijs.nl","description":"Gespecialiseerde verkeersrechtadvocaat voor het terugkrijgen van ingevorderde rijbewijzen.","areaServed":"NL","telephone":"085 – 123 4567","email":"info@geenbewijs.nl"}</script>
   <style>
+    /* ===== SELF-HOSTED FONTS (identical to original) ===== */
+
+    /* Bebas Neue – latin-ext */
+    @font-face {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/bebas-neue-latin-ext.woff2) format("woff2");
+      unicode-range: U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+    }
+    /* Bebas Neue – latin */
+    @font-face {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/bebas-neue-latin.woff2) format("woff2");
+      unicode-range: U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+    /* Bebas Neue metric-adjusted fallback */
+    @font-face {
+      font-family: "Bebas Neue Fallback";
+      src: local(Arial);
+      ascent-override: 117.32%;
+      descent-override: 39.11%;
+      line-gap-override: 0.0%;
+      size-adjust: 76.72%;
+    }
+
+    /* DM Sans – latin-ext (variable, weight 100–1000) */
+    @font-face {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 100 1000;
+      font-display: swap;
+      src: url(fonts/dm-sans-latin-ext.woff2) format("woff2");
+      unicode-range: U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+    }
+    /* DM Sans – latin (variable, weight 100–1000) */
+    @font-face {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 100 1000;
+      font-display: swap;
+      src: url(fonts/dm-sans-latin.woff2) format("woff2");
+      unicode-range: U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+    /* DM Sans metric-adjusted fallback */
+    @font-face {
+      font-family: "DM Sans Fallback";
+      src: local(Arial);
+      ascent-override: 94.9%;
+      descent-override: 29.66%;
+      line-gap-override: 0.0%;
+      size-adjust: 104.53%;
+    }
+
+    /* DM Mono 400 – latin-ext */
+    @font-face {
+      font-family: "DM Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/dm-mono-400-latin-ext.woff2) format("woff2");
+      unicode-range: U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+    }
+    /* DM Mono 400 – latin */
+    @font-face {
+      font-family: "DM Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(fonts/dm-mono-400-latin.woff2) format("woff2");
+      unicode-range: U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+    /* DM Mono 500 – latin-ext */
+    @font-face {
+      font-family: "DM Mono";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(fonts/dm-mono-500-latin-ext.woff2) format("woff2");
+      unicode-range: U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+    }
+    /* DM Mono 500 – latin */
+    @font-face {
+      font-family: "DM Mono";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(fonts/dm-mono-500-latin.woff2) format("woff2");
+      unicode-range: U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+    /* DM Mono metric-adjusted fallback */
+    @font-face {
+      font-family: "DM Mono Fallback";
+      src: local(Arial);
+      ascent-override: 73.71%;
+      descent-override: 23.03%;
+      line-gap-override: 0.0%;
+      size-adjust: 134.59%;
+    }
+
     /* ===== CSS VARIABLES ===== */
     :root {
-      --font-bebas: 'Bebas Neue', 'Arial Narrow', sans-serif;
-      --font-dm-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
-      --font-dm-mono: 'DM Mono', ui-monospace, monospace;
-      --font-sans: var(--font-dm-sans);
-      --font-mono: var(--font-dm-mono);
-      --font-display: var(--font-bebas);
+      /* FIX: variable stacks match original exactly */
+      --font-bebas: "Bebas Neue", "Bebas Neue Fallback";
+      --font-dm-sans: "DM Sans", "DM Sans Fallback";
+      --font-dm-mono: "DM Mono", "DM Mono Fallback";
+      --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+      --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+      --font-display: var(--font-bebas), "Arial Narrow", sans-serif;
 
       --color-brand: #e30016;
       --color-brand-dark: #b8000d;
@@ -57,7 +160,7 @@
     :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
 
     /* ===== TYPOGRAPHY HELPERS ===== */
-    .font-display { font-family: var(--font-display); font-weight: 400; letter-spacing: .01em; }
+    .font-display { font-family: var(--font-display); font-weight: 400; letter-spacing: .01em; font-feature-settings: "kern"; }
     .font-mono { font-family: var(--font-mono); }
     .font-sans { font-family: var(--font-sans); }
     .eyebrow {
@@ -230,6 +333,10 @@
       border-bottom: 1px solid var(--color-border);
       background: var(--color-ink-strong);
       color: #fff;
+      /* subtract fixed header (4rem) + ticker (~2rem) so badge→timer fits above the fold */
+      min-height: calc(100vh - 6rem);
+      display: flex;
+      flex-direction: column;
     }
     .hero-bg {
       position: absolute;
@@ -253,15 +360,16 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 80vh;
-      padding-block: 5rem;
+      /* flex: 1 fills all space above the stats row so content is always centred in view */
+      flex: 1;
+      padding-block: 3.5rem;
       padding-inline: 1.25rem;
       max-width: 72rem;
       margin-inline: auto;
       width: 100%;
     }
     @media (min-width: 40rem) { .hero-content { padding-inline: 2.5rem; } }
-    @media (min-width: 64rem) { .hero-content { padding-block: 7rem; } }
+    @media (min-width: 64rem) { .hero-content { padding-block: 4rem; } }
 
     .hero-badge {
       display: inline-flex;

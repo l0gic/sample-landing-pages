@@ -11,7 +11,7 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml" sizes="any"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalService","name":"GeenBewijs.nl","description":"Gespecialiseerde verkeersrechtadvocaat voor het terugkrijgen van ingevorderde rijbewijzen.","url":"https://geenbewijs.nl","telephone":"0851234567","email":"info@geenbewijs.nl","areaServed":{"@type":"Country","name":"Nederland"},"priceRange":"€€","serviceType":"Verkeersrechtadvocatuur"}</script>
 <script>(function(){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-reveal');}}catch(e){}})();</script>
 <style>
@@ -99,7 +99,7 @@ img,video{max-width:100%;height:auto}
 .btn{cursor:pointer;font-family:var(--font-mono);letter-spacing:.1em;text-transform:uppercase;background:var(--color-red);color:#fff;border:2px solid var(--color-ink);box-shadow:4px 4px 0 0 var(--color-ink);border-radius:0;justify-content:center;align-items:center;gap:.6rem;padding:.95rem 1.5rem;font-size:.72rem;font-weight:700;transition:transform .14s,box-shadow .14s,background .2s,color .2s;display:inline-flex;position:relative}
 .btn:hover{box-shadow:2px 2px 0 0 var(--color-ink);background:#d40009;transform:translate(2px,2px)}
 .btn:active{box-shadow:0 0 0 0 var(--color-ink);transform:translate(4px,4px)}
-.btn .arrow{transition:transform .2s;display:inline-block}
+.btn .arrow{transition:transform .2s;display:inline-block;font-size:1.15em;letter-spacing:0;line-height:1}
 .btn:hover .arrow{transform:translate(3px)}
 .btn--ghost{background:var(--color-paper);color:var(--color-ink);border-color:var(--color-ink)}
 .btn--ghost:hover{background:var(--color-ink);color:var(--color-paper)}
@@ -1045,10 +1045,14 @@ a.contact__cell:hover{background:#221917}
     bheroCopy.style.opacity = String(Math.max(0, 1 - copyFadeP));
     bheroCopy.style.transform = `translateY(${copyFadeP * -18}px)`;
 
-    // Phase 2 (0–0.62): slats retract alternating left / right
-    const slatP = Math.min(1, progress / 0.62);
-    slats.forEach((slat) => {
-      slat.style.transform = `scaleX(${Math.max(0, 1 - slatP)})`;
+    // Phase 2 (0–0.62): slats retract left→right with stagger cascade
+    const slatCount = slats.length;
+    const staggerRange = 0.22;
+    const slatDuration = 0.62 - staggerRange;
+    slats.forEach((slat, i) => {
+      const delay = (i / (slatCount - 1)) * staggerRange;
+      const localP = Math.min(1, Math.max(0, (progress - delay) / slatDuration));
+      slat.style.transform = `scaleX(${Math.max(0, 1 - localP)})`;
     });
 
     // Phase 3 (0.68–1.0): "Elke dag telt" rises in + scrim darkens
@@ -1057,8 +1061,8 @@ a.contact__cell:hover{background:#221917}
     bheroEnd.style.transform = `translateY(${(1 - endP) * 24}px)`;
     bheroScrim.style.opacity = String(Math.min(0.88, endP * 0.88));
 
-    // Nav: light mode while copy visible, dark once slats open the dark scene
-    nav.classList.toggle('on-dark', slatP > 0.55);
+    // Nav: dark once majority of slats have opened
+    nav.classList.toggle('on-dark', progress > 0.48);
   }
 
   window.addEventListener('scroll', animateBhero, { passive: true });

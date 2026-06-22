@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GeenBewijs.nl — Rijbewijs ingevorderd? Binnen 24 uur actie.</title>
+  <meta name="description" content="Gespecialiseerde verkeersrechtadvocaat voor het terugkrijgen van ingevorderde rijbewijzen. Snel, transparant en resultaatgericht." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LegalService","name":"GeenBewijs.nl","url":"https://www.geenbewijs.nl","description":"Gespecialiseerde verkeersrechtadvocaat voor het terugkrijgen van ingevorderde rijbewijzen.","areaServed":"NL","telephone":"085 – 123 4567","email":"info@geenbewijs.nl"}</script>
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --font-bebas: 'Bebas Neue', 'Arial Narrow', sans-serif;
+      --font-dm-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+      --font-dm-mono: 'DM Mono', ui-monospace, monospace;
+      --font-sans: var(--font-dm-sans);
+      --font-mono: var(--font-dm-mono);
+      --font-display: var(--font-bebas);
+
+      --color-brand: #e30016;
+      --color-brand-dark: #b8000d;
+      --color-bg: #fefdfc;
+      --color-surface: #f7f5f4;
+      --color-border: #dfdad9;
+      --color-ink: #211a19;
+      --color-ink-strong: #150d0c;
+      --color-muted: #716867;
+      --color-success: #20c45f;
+      --color-warning: #f6b324;
+      --color-white: #fff;
+
+      --ease-out-expo: cubic-bezier(.16, 1, .3, 1);
+      --animate-ticker: ticker 28s linear infinite;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid; }
+    html { scroll-behavior: smooth; line-height: 1.5; -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--color-bg);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    img, svg, video { vertical-align: middle; display: block; }
+    img { max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; color: inherit; background: transparent; border-radius: 0; }
+    ol, ul { list-style: none; }
+    ::selection { background: var(--color-brand); color: #fff; }
+    :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+
+    /* ===== TYPOGRAPHY HELPERS ===== */
+    .font-display { font-family: var(--font-display); font-weight: 400; letter-spacing: .01em; }
+    .font-mono { font-family: var(--font-mono); }
+    .font-sans { font-family: var(--font-sans); }
+    .eyebrow {
+      font-family: var(--font-mono);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--color-brand);
+      font-size: .6875rem;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      margin-inline: auto;
+      width: 100%;
+      max-width: 72rem;
+      padding-inline: 1.25rem;
+    }
+    @media (min-width: 40rem) { .container { padding-inline: 2.5rem; } }
+
+    .flex-1 { flex: 1; }
+    main { flex: 1; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes ticker { 0% { transform: translate(0); } to { transform: translate(-50%); } }
+    @keyframes rise { 0% { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 50% { opacity: .5; } }
+
+    .animate-ticker { animation: ticker 28s linear infinite; }
+    .animate-rise { animation: rise .7s var(--ease-out-expo) both; }
+    .animate-pulse { animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: fixed;
+      inset-inline: 0;
+      top: 0;
+      z-index: 50;
+      height: 4rem;
+      border-bottom: 1px solid var(--color-border);
+      background: color-mix(in oklab, var(--color-bg) 90%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      margin-inline: auto;
+      max-width: 72rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 1.25rem;
+    }
+    @media (min-width: 40rem) { .header-inner { padding-inline: 2.5rem; } }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--color-ink-strong);
+    }
+    .logo span { color: var(--color-brand); }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    @media (min-width: 64rem) { .nav-links { display: flex; } }
+    .nav-links a {
+      font-size: .8125rem;
+      font-weight: 500;
+      letter-spacing: .025em;
+      color: var(--color-muted);
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--color-ink); }
+
+    .header-actions { display: flex; align-items: center; gap: 1rem; }
+    .header-phone { display: none; font-family: var(--font-mono); font-size: .8125rem; color: var(--color-muted); }
+    @media (min-width: 48rem) { .header-phone { display: inline; } }
+    .header-phone a { font-weight: 500; color: var(--color-ink); }
+
+    .btn-start {
+      display: none;
+      background: var(--color-brand);
+      color: #fff;
+      padding: .625rem 1.5rem;
+      font-size: .8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      transition: background .15s;
+    }
+    @media (min-width: 40rem) { .btn-start { display: inline-block; } }
+    .btn-start:hover { background: var(--color-brand-dark); }
+
+    .menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--color-border);
+      color: var(--color-ink);
+      cursor: pointer;
+      background: transparent;
+    }
+    @media (min-width: 64rem) { .menu-btn { display: none; } }
+
+    /* Mobile nav */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: 4rem;
+      inset-inline: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.25rem;
+      z-index: 49;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    #mobile-nav.open { display: flex; }
+    #mobile-nav a {
+      font-size: .9375rem;
+      font-weight: 500;
+      color: var(--color-ink);
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    #mobile-nav a:last-child { border-bottom: none; }
+    .header-spacer { height: 4rem; }
+
+    /* ===== TICKER ===== */
+    .ticker-wrap {
+      overflow: hidden;
+      white-space: nowrap;
+      background: var(--color-brand);
+      padding-block: .5rem;
+    }
+    .ticker-track { display: inline-flex; animation: ticker 28s linear infinite; }
+    .ticker-item {
+      padding-inline: 2rem;
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #fff;
+    }
+    .ticker-item::before {
+      content: '●';
+      margin-right: .875rem;
+      color: rgba(255,255,255,.7);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-ink-strong);
+      color: #fff;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay1 {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--color-ink-strong), color-mix(in oklab, var(--color-ink-strong) 85%, transparent), color-mix(in oklab, var(--color-ink-strong) 30%, transparent));
+    }
+    .hero-overlay2 {
+      position: absolute;
+      inset: 0;
+      background: color-mix(in oklab, var(--color-ink-strong) 25%, transparent);
+    }
+    .hero-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 80vh;
+      padding-block: 5rem;
+      padding-inline: 1.25rem;
+      max-width: 72rem;
+      margin-inline: auto;
+      width: 100%;
+    }
+    @media (min-width: 40rem) { .hero-content { padding-inline: 2.5rem; } }
+    @media (min-width: 64rem) { .hero-content { padding-block: 7rem; } }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: 1px solid color-mix(in oklab, var(--color-brand) 50%, transparent);
+      background: color-mix(in oklab, var(--color-brand) 15%, transparent);
+      padding: .375rem .875rem;
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--color-brand);
+      width: fit-content;
+      margin-bottom: 1.75rem;
+      animation: rise .7s var(--ease-out-expo) both;
+    }
+    .badge-dot {
+      width: .375rem;
+      height: .375rem;
+      border-radius: 9999px;
+      background: var(--color-brand);
+      animation: pulse 2s cubic-bezier(.4,0,.6,1) infinite;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      max-width: 56rem;
+      font-size: clamp(3.5rem, 10vw, 9.5rem);
+      line-height: .82;
+      color: #fff;
+      text-wrap: balance;
+      animation: rise .7s var(--ease-out-expo) both;
+      animation-delay: 60ms;
+    }
+    .hero-h1 span { color: var(--color-brand); }
+
+    .hero-desc {
+      margin-top: 1.75rem;
+      max-width: 36rem;
+      font-size: 1.125rem;
+      line-height: 1.625;
+      color: rgba(255,255,255,.8);
+      text-wrap: pretty;
+      animation: rise .7s var(--ease-out-expo) both;
+      animation-delay: 120ms;
+    }
+    .hero-desc strong { font-weight: 500; color: #fff; }
+
+    .hero-ctas {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      animation: rise .7s var(--ease-out-expo) both;
+      animation-delay: 180ms;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      cursor: pointer;
+      transition: all .15s;
+      padding: 1rem 2rem;
+      font-size: .875rem;
+      background: var(--color-brand);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--color-brand-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 32px rgba(232,0,29,.3);
+    }
+    .btn-primary svg { transition: transform .2s; }
+    .btn-primary:hover svg { transform: translateX(4px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: 1px solid rgba(255,255,255,.3);
+      padding: 1rem 1.75rem;
+      font-size: .875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      color: #fff;
+      transition: border-color .15s;
+    }
+    .btn-outline:hover { border-color: #fff; }
+
+    .hero-timer {
+      margin-top: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .625rem;
+      font-family: var(--font-mono);
+      font-size: .8125rem;
+      color: rgba(255,255,255,.65);
+      animation: rise .7s var(--ease-out-expo) both;
+      animation-delay: 240ms;
+    }
+    .hero-timer svg { color: var(--color-brand); flex-shrink: 0; }
+    .hero-timer strong { font-weight: 600; color: #fff; }
+
+    /* Hero stats */
+    .hero-stats {
+      position: relative;
+      max-width: 72rem;
+      margin-inline: auto;
+      width: 100%;
+      padding-inline: 1.25rem;
+    }
+    @media (min-width: 40rem) { .hero-stats { padding-inline: 2.5rem; } }
+    .hero-stats-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 3.5rem;
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding-block: 2rem;
+    }
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      line-height: 1;
+      color: #fff;
+    }
+    @media (min-width: 64rem) { .stat-value { font-size: 3.75rem; } }
+    .stat-label {
+      margin-top: .5rem;
+      font-family: var(--font-mono);
+      font-size: .6875rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(255,255,255,.55);
+    }
+
+    /* ===== QUICK FACTS BAR ===== */
+    .facts-bar {
+      background: var(--color-ink-strong);
+      color: #fff;
+    }
+    .facts-inner {
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-inline: 1.25rem;
+      display: flex;
+      gap: 3rem;
+      overflow-x: auto;
+      padding-block: 1.25rem;
+      scrollbar-width: none;
+    }
+    @media (min-width: 40rem) { .facts-inner { padding-inline: 2.5rem; } }
+    .facts-inner::-webkit-scrollbar { display: none; }
+    .fact-item { display: flex; align-items: center; gap: .75rem; flex-shrink: 0; }
+    .fact-item svg { color: var(--color-brand); flex-shrink: 0; }
+    .fact-text { font-size: .8125rem; font-weight: 500; white-space: nowrap; }
+    .fact-sub { display: block; font-size: .75rem; font-weight: 400; color: rgba(255,255,255,.55); }
+
+    /* ===== SECTIONS (shared) ===== */
+    section { position: relative; }
+    .section-pad { padding-block: 5rem; }
+    @media (min-width: 64rem) { .section-pad { padding-block: 7rem; } }
+
+    /* ===== INTAKE FORM SECTION ===== */
+    .intake-section {
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-surface);
+      scroll-margin-top: 6rem;
+    }
+    .intake-inner { max-width: 48rem; margin-inline: auto; }
+    .section-header { margin-bottom: 3rem; text-align: center; }
+    .section-h2 {
+      font-family: var(--font-display);
+      margin-top: .75rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: .95;
+      color: var(--color-ink-strong);
+      text-wrap: balance;
+    }
+    .section-desc { margin-top: .75rem; color: var(--color-muted); max-width: 36rem; margin-inline: auto; }
+
+    /* Step indicator */
+    .steps-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .step-wrap { display: flex; align-items: center; }
+    .step-block { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+    .step-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      font-family: var(--font-mono);
+      font-size: .8125rem;
+      transition: all .15s;
+    }
+    .step-num.active { border: 1px solid var(--color-brand); background: var(--color-brand); color: #fff; }
+    .step-num.inactive { border: 1px solid var(--color-border); background: var(--color-bg); color: var(--color-muted); }
+    .step-label {
+      font-size: .6875rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      white-space: nowrap;
+    }
+    .step-label.active { color: var(--color-ink); }
+    .step-label.inactive { color: var(--color-muted); }
+    .step-line {
+      width: 2rem;
+      height: 1px;
+      background: var(--color-border);
+      margin-inline: .25rem;
+      margin-bottom: 1.75rem;
+    }
+    @media (min-width: 40rem) { .step-line { width: 4rem; } }
+
+    /* Form */
+    .form-card {
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      padding: 1.5rem;
+    }
+    @media (min-width: 40rem) { .form-card { padding: 2.5rem; } }
+
+    /* Form step */
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+
+    .form-space { display: flex; flex-direction: column; gap: 1.5rem; }
+    fieldset { border: none; padding: 0; }
+    legend {
+      display: block;
+      margin-bottom: .5rem;
+      font-size: .8125rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      color: var(--color-ink);
+    }
+    .required { color: var(--color-brand); margin-left: .125rem; }
+    .radio-grid { display: grid; gap: .75rem; }
+    @media (min-width: 40rem) { .radio-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .radio-label {
+      display: flex;
+      cursor: pointer;
+      align-items: flex-start;
+      gap: .75rem;
+      border: 1px solid var(--color-border);
+      padding: 1rem;
+      text-align: left;
+      transition: all .15s;
+    }
+    .radio-label:hover { border-color: var(--color-muted); }
+    .radio-label:has(input:checked) { border-color: var(--color-brand); background: color-mix(in oklab, var(--color-brand) 5%, transparent); }
+    .radio-label input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .radio-circle {
+      margin-top: .125rem;
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 9999px;
+      border: 2px solid var(--color-border);
+      transition: border-color .15s;
+    }
+    .radio-label:has(input:checked) .radio-circle {
+      border-color: var(--color-brand);
+      background: var(--color-brand);
+      box-shadow: inset 0 0 0 3px var(--color-bg);
+    }
+    .radio-title { display: block; font-size: .875rem; font-weight: 500; color: var(--color-ink); }
+    .radio-sub { font-size: .75rem; color: var(--color-muted); }
+
+    .form-label {
+      display: block;
+      margin-bottom: .5rem;
+      font-size: .8125rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      color: var(--color-ink);
+    }
+    .form-select {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: .875rem 1rem;
+      font-size: .9375rem;
+      color: var(--color-ink);
+      outline: none;
+      transition: border-color .15s;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23716867' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+      padding-right: 2.5rem;
+    }
+    .form-select:focus { border-color: var(--color-brand); }
+
+    .form-input {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: .875rem 1rem;
+      font-size: .9375rem;
+      color: var(--color-ink);
+      outline: none;
+      transition: border-color .15s;
+    }
+    .form-input:focus { border-color: var(--color-brand); }
+    .form-input::placeholder { color: var(--color-muted); }
+
+    .form-footer {
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.5rem;
+      gap: .75rem;
+    }
+    .form-footer-between {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.5rem;
+    }
+
+    .btn-next, .btn-prev, .btn-submit {
+      padding: .875rem 2rem;
+      font-size: .875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .025em;
+      cursor: pointer;
+      transition: background .15s;
+      border: none;
+    }
+    .btn-next, .btn-submit { background: var(--color-brand); color: #fff; }
+    .btn-next:hover, .btn-submit:hover { background: var(--color-brand-dark); }
+    .btn-prev { background: transparent; border: 1px solid var(--color-border); color: var(--color-ink); }
+    .btn-prev:hover { border-color: var(--color-muted); }
+
+    /* Form success */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+    .form-success.active { display: block; }
+    .success-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 9999px;
+      background: color-mix(in oklab, var(--color-success) 10%, transparent);
+      color: var(--color-success);
+      margin-inline: auto;
+      margin-bottom: 1.5rem;
+    }
+    .success-h { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); color: var(--color-ink-strong); margin-bottom: .75rem; }
+    .success-p { color: var(--color-muted); max-width: 30rem; margin-inline: auto; }
+
+    /* ===== HOW IT WORKS ===== */
+    .hiw-section { border-bottom: 1px solid var(--color-border); }
+    .hiw-grid {
+      margin-top: 3.5rem;
+      display: grid;
+      gap: 1px;
+      border: 1px solid var(--color-border);
+      background: var(--color-border);
+    }
+    @media (min-width: 40rem) { .hiw-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 64rem) { .hiw-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .hiw-card {
+      background: var(--color-bg);
+      padding: 2rem;
+      transition: background .15s;
+    }
+    .hiw-card:hover { background: var(--color-surface); }
+    .hiw-card-head { display: flex; align-items: center; justify-content: space-between; }
+    .hiw-num {
+      font-family: var(--font-display);
+      font-size: 4.5rem;
+      line-height: 1;
+      color: var(--color-border);
+      transition: color .15s;
+    }
+    .hiw-card:hover .hiw-num { color: var(--color-brand); }
+    .hiw-icon { color: var(--color-brand); }
+    .hiw-title { margin-top: 1.5rem; font-size: 1rem; font-weight: 700; color: var(--color-ink); }
+    .hiw-desc { margin-top: .5rem; font-size: .875rem; line-height: 1.625; color: var(--color-muted); }
+    .hiw-time {
+      margin-top: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .375rem;
+      font-family: var(--font-mono);
+      font-size: .6875rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--color-brand);
+    }
+
+    /* ===== WHY US SECTION ===== */
+    .why-section {
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-surface);
+    }
+    .why-grid {
+      display: grid;
+      gap: 3rem;
+    }
+    @media (min-width: 64rem) {
+      .why-grid {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 4rem;
+      }
+    }
+    .why-left { }
+    @media (min-width: 64rem) {
+      .why-left {
+        position: sticky;
+        top: 6rem;
+        align-self: flex-start;
+      }
+    }
+    .why-h2 {
+      font-family: var(--font-display);
+      margin-top: 1rem;
+      font-size: clamp(3.25rem, 7vw, 6.5rem);
+      line-height: .82;
+      color: var(--color-ink-strong);
+    }
+    .why-h2 span { color: var(--color-brand); }
+    .why-desc { margin-top: 1.5rem; max-width: 28rem; color: var(--color-muted); }
+    .why-features { display: flex; flex-direction: column; gap: 1rem; }
+    .why-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      padding: 1.5rem;
+      transition: border-color .15s;
+    }
+    .why-feature:hover { border-color: var(--color-brand); }
+    .why-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      flex-shrink: 0;
+      border: 1px solid var(--color-border);
+      color: var(--color-brand);
+    }
+    .why-feature-title { font-size: .9375rem; font-weight: 700; color: var(--color-ink-strong); }
+    .why-feature-desc { margin-top: .375rem; font-size: .875rem; line-height: 1.625; color: var(--color-muted); }
+
+    /* ===== RESULTS SECTION ===== */
+    .results-section { background: var(--color-ink-strong); color: #fff; }
+    .results-list { margin-top: 3.5rem; display: flex; flex-direction: column; }
+    .result-row {
+      display: grid;
+      align-items: baseline;
+      gap: 1.25rem;
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-block: 2.5rem;
+    }
+    .result-row:last-child { border-bottom: 1px solid rgba(255,255,255,.1); }
+    @media (min-width: 64rem) {
+      .result-row {
+        grid-template-columns: minmax(0, 11rem) 1fr;
+        gap: 3rem;
+      }
+    }
+    .result-time {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 7vw, 5.5rem);
+      line-height: .82;
+      color: #fff;
+    }
+    .result-badge {
+      display: inline-block;
+      border: 1px solid;
+      padding: .25rem .625rem;
+      font-family: var(--font-mono);
+      font-size: .6875rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .badge-success { border-color: color-mix(in oklab, var(--color-success) 40%, transparent); color: var(--color-success); }
+    .badge-warning { border-color: color-mix(in oklab, var(--color-warning) 40%, transparent); color: var(--color-warning); }
+    .result-desc { margin-top: 1rem; max-width: 42rem; font-size: 1.125rem; line-height: 1.625; color: rgba(255,255,255,.8); }
+    .result-meta { margin-top: .75rem; font-family: var(--font-mono); font-size: .6875rem; text-transform: uppercase; letter-spacing: .025em; color: rgba(255,255,255,.4); }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-surface);
+      scroll-margin-top: 6rem;
+    }
+    .faq-grid {
+      display: grid;
+      gap: 2.5rem;
+    }
+    @media (min-width: 64rem) {
+      .faq-grid {
+        grid-template-columns: .85fr 1.15fr;
+        gap: 4rem;
+      }
+    }
+    .faq-left { }
+    @media (min-width: 64rem) {
+      .faq-left {
+        position: sticky;
+        top: 6rem;
+        align-self: flex-start;
+      }
+    }
+    .faq-desc { margin-top: 1.25rem; max-width: 24rem; color: var(--color-muted); }
+    .faq-list { width: 100%; border-top: 1px solid var(--color-border); }
+    .faq-item { border-bottom: 1px solid var(--color-border); }
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1.25rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-ink);
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      transition: color .15s;
+    }
+    .faq-question:hover { color: var(--color-ink-strong); }
+    .faq-icon {
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      color: var(--color-brand);
+      transition: transform .3s;
+      line-height: 1;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .3s;
+    }
+    .faq-item.open .faq-answer { grid-template-rows: 1fr; }
+    .faq-answer-inner { overflow: hidden; }
+    .faq-answer p {
+      padding-bottom: 1.25rem;
+      font-size: .9375rem;
+      line-height: 1.625;
+      color: var(--color-muted);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--color-ink-strong);
+      color: #fff;
+    }
+    .cta-content {
+      position: relative;
+      max-width: 72rem;
+      margin-inline: auto;
+      width: 100%;
+      padding-inline: 1.25rem;
+      padding-block: 6rem;
+    }
+    @media (min-width: 40rem) { .cta-content { padding-inline: 2.5rem; } }
+    @media (min-width: 64rem) { .cta-content { padding-block: 9rem; } }
+    .cta-h2 {
+      font-family: var(--font-display);
+      margin-top: .75rem;
+      max-width: 48rem;
+      font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+      line-height: .88;
+      color: #fff;
+      text-wrap: balance;
+    }
+    .cta-h2 span { color: var(--color-brand); }
+    .cta-desc { margin-top: 1.25rem; max-width: 36rem; font-size: 1rem; line-height: 1.625; color: rgba(255,255,255,.8); text-wrap: pretty; }
+    .cta-buttons { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section { scroll-margin-top: 6rem; }
+    .contact-inner { max-width: 72rem; margin-inline: auto; padding-inline: 1.25rem; padding-block: 5rem; text-align: center; }
+    @media (min-width: 40rem) { .contact-inner { padding-inline: 2.5rem; } }
+    @media (min-width: 64rem) { .contact-inner { padding-block: 7rem; } }
+    .contact-sub { margin-top: .75rem; color: var(--color-muted); max-width: 36rem; margin-inline: auto; }
+    .contact-grid {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 1rem;
+      max-width: 36rem;
+      margin-inline: auto;
+      text-align: left;
+    }
+    @media (min-width: 40rem) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
+    .contact-card {
+      display: block;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding: 1.5rem;
+      transition: border-color .15s;
+    }
+    .contact-card:hover { border-color: var(--color-brand); }
+    .contact-card svg { color: var(--color-brand); }
+    .contact-type { margin-top: .75rem; font-size: .9375rem; font-weight: 700; color: var(--color-ink-strong); }
+    .contact-note { font-size: .8125rem; color: var(--color-muted); }
+    .contact-value { margin-top: .5rem; font-family: var(--font-mono); font-size: .875rem; font-weight: 500; color: var(--color-brand); }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface);
+      padding-block: 2rem;
+    }
+    .footer-inner {
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-inline: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+    }
+    @media (min-width: 40rem) { .footer-inner { padding-inline: 2.5rem; flex-direction: row; justify-content: space-between; text-align: left; } }
+    .footer-logo { font-family: var(--font-display); font-size: 1.25rem; color: var(--color-ink-strong); }
+    .footer-logo span { color: var(--color-brand); }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: .8125rem; color: var(--color-muted); transition: color .15s; }
+    .footer-links a:hover { color: var(--color-ink); }
+    .footer-copy { font-size: .75rem; color: var(--color-muted); }
+
+    /* ===== SECTION EYEBROW ===== */
+    .eyebrow-row {
+      display: inline-flex;
+      align-items: center;
+      gap: .625rem;
+      font-family: var(--font-mono);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--color-brand);
+      font-size: .6875rem;
+    }
+    .eyebrow-num { color: var(--color-muted); }
+    .eyebrow-line { display: inline-block; width: 1.25rem; height: 1px; background: color-mix(in oklab, var(--color-brand) 50%, transparent); }
+
+    /* ===== ICON HELPERS ===== */
+    svg { display: inline-block; }
+    .icon-sm { width: 1rem; height: 1rem; }
+    .icon-md { width: 1.25rem; height: 1.25rem; }
+    .icon-lg { width: 1.5rem; height: 1.5rem; }
+    .icon-xl { width: 1.75rem; height: 1.75rem; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="header-inner">
+    <a class="logo" href="/">Geen<span>Bewijs</span>.nl</a>
+    <ul class="nav-links">
+      <li><a href="#">Invordering</a></li>
+      <li><a href="#">Snelheid</a></li>
+      <li><a href="#">Alcohol/Drugs</a></li>
+      <li><a href="#">Kennisbank</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="header-actions">
+      <span class="header-phone">Spoed: <a href="tel:0851234567">085 – 123 4567</a></span>
+      <a class="btn-start" href="#aanvraag">Start aanvraag →</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span style="font-size:1.125rem;line-height:1" id="menuIcon">☰</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile nav -->
+<div id="mobile-nav" role="navigation">
+  <a href="#">Invordering</a>
+  <a href="#">Snelheid</a>
+  <a href="#">Alcohol/Drugs</a>
+  <a href="#">Kennisbank</a>
+  <a href="#">Blog</a>
+  <a href="tel:0851234567" style="color:var(--color-brand)">085 – 123 4567</a>
+</div>
+
+<div class="header-spacer" aria-hidden="true"></div>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Rijbewijs ingevorderd? Handel direct</span>
+    <span class="ticker-item">Binnen 24 uur juridisch advies</span>
+    <span class="ticker-item">Intake in 2 minuten geregeld</span>
+    <span class="ticker-item">Gespecialiseerd verkeersrecht</span>
+    <span class="ticker-item">Meer dan 500 rijbewijzen teruggekregen</span>
+    <span class="ticker-item">Bezwaarschrift direct ingediend</span>
+    <span class="ticker-item">Rijbewijs ingevorderd? Handel direct</span>
+    <span class="ticker-item">Binnen 24 uur juridisch advies</span>
+    <span class="ticker-item">Intake in 2 minuten geregeld</span>
+    <span class="ticker-item">Gespecialiseerd verkeersrecht</span>
+    <span class="ticker-item">Meer dan 500 rijbewijzen teruggekregen</span>
+    <span class="ticker-item">Bezwaarschrift direct ingediend</span>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <img
+    src="images/highway-streak.jpg"
+    alt="Nederlandse snelweg in de schemering met rode achterlichtsporen"
+    class="hero-bg"
+  />
+  <div class="hero-overlay1" aria-hidden="true"></div>
+  <div class="hero-overlay2" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <span class="hero-badge">
+      <span class="badge-dot"></span>
+      Urgente rechtsbijstand
+    </span>
+
+    <h1 class="hero-h1">Rijbewijs <span>kwijt?</span> Wij halen het terug.</h1>
+
+    <p class="hero-desc">
+      Ingevorderd wegens snelheid, alcohol of een andere overtreding?
+      <strong>Elke dag telt.</strong> Doe direct uw aanvraag — wij starten vandaag nog uw procedure.
+    </p>
+
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#aanvraag">
+        Start intake
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a class="btn-outline" href="tel:0851234567">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Direct bellen
+      </a>
+    </div>
+
+    <p class="hero-timer">
+      <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <span><strong>Nog 10 dagen</strong> voordat de officier van justitie beslist over inhouding.</span>
+    </p>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stats-inner">
+      <div>
+        <div class="stat-value">500+</div>
+        <div class="stat-label">Rijbewijzen teruggekregen</div>
+      </div>
+      <div>
+        <div class="stat-value">24u</div>
+        <div class="stat-label">Gemiddelde reactietijd</div>
+      </div>
+      <div>
+        <div class="stat-value">2min</div>
+        <div class="stat-label">Intake afronden</div>
+      </div>
+      <div>
+        <div class="stat-value">94%</div>
+        <div class="stat-label">Succesvol resultaat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK FACTS BAR -->
+<div class="facts-bar">
+  <div class="facts-inner">
+    <div class="fact-item">
+      <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <span class="fact-text">10 dagen<span class="fact-sub">OvJ beslist over inhouding</span></span>
+    </div>
+    <div class="fact-item">
+      <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+      <span class="fact-text">Klaagschrift mogelijk<span class="fact-sub">Art. 552a Sv — direct indienen</span></span>
+    </div>
+    <div class="fact-item">
+      <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+      <span class="fact-text">Zitting aanvragen<span class="fact-sub">Rechter-commissaris procedure</span></span>
+    </div>
+    <div class="fact-item">
+      <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+      <span class="fact-text">Werk aan huis?<span class="fact-sub">Verzoek spoedbeoordeling</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- INTAKE FORM -->
+<section id="aanvraag" class="intake-section section-pad">
+  <div class="container">
+    <div class="intake-inner">
+      <div class="section-header">
+        <p class="eyebrow">Snelle intake</p>
+        <h2 class="section-h2">Start uw aanvraag</h2>
+        <p class="section-desc">Vul uw situatie in. In 2 minuten geregeld — onze advocaat neemt binnen 24 uur persoonlijk contact op.</p>
+      </div>
+
+      <!-- Steps indicator -->
+      <div class="steps-indicator" id="stepsIndicator">
+        <div class="step-wrap">
+          <div class="step-block">
+            <span class="step-num active" id="step-num-1">1</span>
+            <span class="step-label active" id="step-label-1">Situatie</span>
+          </div>
+          <span class="step-line"></span>
+        </div>
+        <div class="step-wrap">
+          <div class="step-block">
+            <span class="step-num inactive" id="step-num-2">2</span>
+            <span class="step-label inactive" id="step-label-2">Details</span>
+          </div>
+          <span class="step-line"></span>
+        </div>
+        <div class="step-wrap">
+          <div class="step-block">
+            <span class="step-num inactive" id="step-num-3">3</span>
+            <span class="step-label inactive" id="step-label-3">Contact</span>
+          </div>
+          <span class="step-line"></span>
+        </div>
+        <div class="step-wrap">
+          <div class="step-block">
+            <span class="step-num inactive" id="step-num-4">✓</span>
+            <span class="step-label inactive" id="step-label-4">Resultaat</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <!-- Step 1: Situatie -->
+        <div class="form-step active" id="formStep1">
+          <div class="form-space">
+            <fieldset>
+              <legend>Reden invordering<span class="required">*</span></legend>
+              <div class="radio-grid">
+                <label class="radio-label" for="reden-snelheid">
+                  <input type="radio" id="reden-snelheid" name="reden" value="snelheid" />
+                  <span class="radio-circle"></span>
+                  <span>
+                    <span class="radio-title">Te hard rijden</span>
+                    <span class="radio-sub">50+ km/u te snel, Art. 164 WVW</span>
+                  </span>
+                </label>
+                <label class="radio-label" for="reden-alcohol">
+                  <input type="radio" id="reden-alcohol" name="reden" value="alcohol" />
+                  <span class="radio-circle"></span>
+                  <span>
+                    <span class="radio-title">Rijden onder invloed</span>
+                    <span class="radio-sub">Alcohol of drugs</span>
+                  </span>
+                </label>
+                <label class="radio-label" for="reden-gevaar">
+                  <input type="radio" id="reden-gevaar" name="reden" value="gevaar" />
+                  <span class="radio-circle"></span>
+                  <span>
+                    <span class="radio-title">Gevaarlijk rijgedrag</span>
+                    <span class="radio-sub">Roekeloos rijden, vluchtmisdrijf</span>
+                  </span>
+                </label>
+                <label class="radio-label" for="reden-anders">
+                  <input type="radio" id="reden-anders" name="reden" value="anders" />
+                  <span class="radio-circle"></span>
+                  <span>
+                    <span class="radio-title">Anders</span>
+                    <span class="radio-sub">Andere reden of meerdere</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label class="form-label" for="wanneer">Wanneer is uw rijbewijs ingevorderd?<span class="required">*</span></label>
+              <select class="form-select" id="wanneer" name="wanneer">
+                <option value="">Selecteer een optie</option>
+                <option>Vandaag</option>
+                <option>Gisteren</option>
+                <option>2–3 dagen geleden</option>
+                <option>4–7 dagen geleden</option>
+                <option>Meer dan een week geleden</option>
+              </select>
+            </div>
+
+            <fieldset>
+              <legend>Hebt u al bericht ontvangen van het OM?</legend>
+              <div class="radio-grid">
+                <label class="radio-label" for="om-nee">
+                  <input type="radio" id="om-nee" name="om" value="nee" />
+                  <span class="radio-circle"></span>
+                  <span>
+                    <span class="radio-title">Nee, nog niet</span>
+                    <span class="radio-sub">Binnen de 10-dagentermijn</span>
+                  </span>
+                </label>
+                <label class="radio-label" for="om-ja">
+                  <input type="radio" id="om-ja" name="om" value="ja" />
+                  <span class="radio-circle"></span>
+                  <span>
+                    <span class="radio-title">Ja</span>
+                    <span class="radio-sub">Brief of beslissing ontvangen</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-footer">
+            <button type="button" class="btn-next" onclick="nextStep(1)">Volgende stap <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <!-- Step 2: Details -->
+        <div class="form-step" id="formStep2">
+          <div class="form-space">
+            <div>
+              <label class="form-label" for="rijbewijs-type">Type rijbewijs</label>
+              <select class="form-select" id="rijbewijs-type" name="rijbewijs-type">
+                <option value="">Selecteer een optie</option>
+                <option>B – Personenauto</option>
+                <option>BE – Aanhangwagen</option>
+                <option>C – Vrachtwagen</option>
+                <option>D – Bus</option>
+                <option>Anders</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="heeft-werk">Heeft u uw rijbewijs nodig voor werk?</label>
+              <select class="form-select" id="heeft-werk" name="heeft-werk">
+                <option value="">Selecteer een optie</option>
+                <option>Ja, ik kan niet werken zonder rijbewijs</option>
+                <option>Ja, maar ik kan ook anders reizen</option>
+                <option>Nee, niet voor werk</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="toelichting">Korte toelichting (optioneel)</label>
+              <textarea class="form-input" id="toelichting" name="toelichting" rows="4" style="resize:vertical" placeholder="Beschrijf kort wat er is gebeurd..."></textarea>
+            </div>
+          </div>
+          <div class="form-footer-between">
+            <button type="button" class="btn-prev" onclick="prevStep(2)">← Vorige</button>
+            <button type="button" class="btn-next" onclick="nextStep(2)">Volgende stap →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact -->
+        <div class="form-step" id="formStep3">
+          <div class="form-space">
+            <div>
+              <label class="form-label" for="naam">Uw naam<span class="required">*</span></label>
+              <input class="form-input" type="text" id="naam" name="naam" placeholder="Voor- en achternaam" />
+            </div>
+            <div>
+              <label class="form-label" for="telefoon">Telefoonnummer<span class="required">*</span></label>
+              <input class="form-input" type="tel" id="telefoon" name="telefoon" placeholder="06 – 12 34 56 78" />
+            </div>
+            <div>
+              <label class="form-label" for="email">E-mailadres<span class="required">*</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="uw@email.nl" />
+            </div>
+            <div>
+              <label class="form-label" for="voorkeur-tijd">Voorkeurstijd voor terugbelafspraak</label>
+              <select class="form-select" id="voorkeur-tijd" name="voorkeur-tijd">
+                <option value="">Geen voorkeur</option>
+                <option>Ochtend (08:00–12:00)</option>
+                <option>Middag (12:00–17:00)</option>
+                <option>Avond (17:00–20:00)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-footer-between">
+            <button type="button" class="btn-prev" onclick="prevStep(3)">← Vorige</button>
+            <button type="button" class="btn-submit" onclick="submitForm()">Aanvraag versturen →</button>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h3 class="success-h">Aanvraag ontvangen!</h3>
+          <p class="success-p">Bedankt. Onze verkeersrechtadvocaat neemt binnen 24 uur persoonlijk contact op. Controleer uw telefoon en e-mail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw-section section-pad">
+  <div class="container">
+    <p class="eyebrow-row"><span class="eyebrow-num">01</span><span class="eyebrow-line" aria-hidden="true"></span>De procedure</p>
+    <h2 class="section-h2" style="margin-top:.75rem">Zo werkt het</h2>
+    <p style="margin-top:1rem;max-width:36rem;color:var(--color-muted)">Van aanvraag tot rijbewijs terug — helder en snel.</p>
+
+    <div class="hiw-grid">
+      <div class="hiw-card">
+        <div class="hiw-card-head">
+          <span class="hiw-num" aria-hidden="true">01</span>
+          <svg class="hiw-icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        </div>
+        <h3 class="hiw-title">Intake</h3>
+        <p class="hiw-desc">Vul uw situatie in via ons formulier. In 2 minuten klaar — wij weten direct wat er speelt.</p>
+        <p class="hiw-time">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          2 minuten
+        </p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-card-head">
+          <span class="hiw-num" aria-hidden="true">02</span>
+          <svg class="hiw-icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        </div>
+        <h3 class="hiw-title">Advocaat belt</h3>
+        <p class="hiw-desc">Onze gespecialiseerde verkeersrechtadvocaat neemt binnen 24 uur contact op voor gratis advies.</p>
+        <p class="hiw-time">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Binnen 24 uur
+        </p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-card-head">
+          <span class="hiw-num" aria-hidden="true">03</span>
+          <svg class="hiw-icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+        </div>
+        <h3 class="hiw-title">Procedure gestart</h3>
+        <p class="hiw-desc">Wij dienen direct een klaagschrift of bezwaar in bij de rechter-commissaris of het OM.</p>
+        <p class="hiw-time">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Dezelfde dag
+        </p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-card-head">
+          <span class="hiw-num" aria-hidden="true">04</span>
+          <svg class="hiw-icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+        </div>
+        <h3 class="hiw-title">Rijbewijs terug</h3>
+        <p class="hiw-desc">In de meeste gevallen krijgt u uw rijbewijs zo snel mogelijk terug. Wij houden u op de hoogte.</p>
+        <p class="hiw-time">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Zo snel mogelijk
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section section-pad">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left">
+        <p class="eyebrow-row"><span class="eyebrow-num">02</span><span class="eyebrow-line" aria-hidden="true"></span>Waarom GeenBewijs.nl</p>
+        <h2 class="why-h2">Snel.<br/>Scherp.<br/><span>Resultaat.</span></h2>
+        <p class="why-desc">Geen advocatenkantoor dat u weken laat wachten. Wij begrijpen urgentie. Uw rijbewijs is uw vrijheid — elke dag telt.</p>
+      </div>
+      <div class="why-features">
+        <div class="why-feature">
+          <span class="why-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <div>
+            <h3 class="why-feature-title">Gespecialiseerde verkeersrechtadvocaat</h3>
+            <p class="why-feature-desc">Geen generalist. Wij doen dit dagelijks en kennen elke procedurestap, elk argument.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <span class="why-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div>
+            <h3 class="why-feature-title">Intake in 2 minuten</h3>
+            <p class="why-feature-desc">Ons formulier is helder en snel. U weet meteen waar u staat en wij bellen u dezelfde dag.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <span class="why-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></svg>
+          </span>
+          <div>
+            <h3 class="why-feature-title">Resultaatgericht</h3>
+            <p class="why-feature-desc">In de meeste zaken slagen wij erin om het rijbewijs zo snel mogelijk terug te krijgen.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <span class="why-icon">
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </span>
+          <div>
+            <h3 class="why-feature-title">Transparant en duidelijk</h3>
+            <p class="why-feature-desc">Geen juridisch jargon. Wij leggen precies uit wat er gebeurt, wat het kost en wat uw kansen zijn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section section-pad">
+  <div class="container">
+    <p class="eyebrow-row"><span style="color:var(--color-muted)">03</span><span class="eyebrow-line" aria-hidden="true"></span>Bewezen resultaten</p>
+    <h2 class="font-display" style="margin-top:.75rem;font-size:clamp(2.75rem,6vw,5rem);line-height:.92;color:#fff">Rijbewijzen teruggekregen</h2>
+    <p style="margin-top:1rem;max-width:36rem;color:rgba(255,255,255,.6)">Een greep uit onze succesvolle zaken. Namen zijn geanonimiseerd.</p>
+
+    <div class="results-list">
+      <div class="result-row">
+        <div class="result-time">8 Dagen</div>
+        <div>
+          <span class="result-badge badge-success">Rijbewijs terug</span>
+          <p class="result-desc">Beroepschauffeur, 178 km/u op de snelweg. Via spoedbeoordeling rijbewijs teruggekregen in 8 werkdagen.</p>
+          <p class="result-meta">Snelheidsovertreding · Art. 552a Sv · 2025</p>
+        </div>
+      </div>
+      <div class="result-row">
+        <div class="result-time">12 Dagen</div>
+        <div>
+          <span class="result-badge badge-success">Rijbewijs terug</span>
+          <p class="result-desc">Mantelzorger, 162 km/u. Klaagschrift ingediend met persoonlijke omstandigheden als grond. Procedure succesvol.</p>
+          <p class="result-meta">Snelheidsovertreding · Klaagschrift · 2025</p>
+        </div>
+      </div>
+      <div class="result-row">
+        <div class="result-time">50% Korter</div>
+        <div>
+          <span class="result-badge badge-warning">Straf verminderd</span>
+          <p class="result-desc">Invordering wegens alcohol. Termijn succesvol bekort van 6 naar 3 maanden via onderhandeling met het OM.</p>
+          <p class="result-meta">Rijden onder invloed · OM-onderhandeling · 2024</p>
+        </div>
+      </div>
+      <div class="result-row">
+        <div class="result-time">5 Dagen</div>
+        <div>
+          <span class="result-badge badge-success">Rijbewijs terug</span>
+          <p class="result-desc">Ondernemer, rijbewijs essentieel voor bedrijfsvoering. Spoedprocedure succesvol in vijf werkdagen.</p>
+          <p class="result-meta">Snelheidsovertreding · Spoed · 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-section section-pad">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-left">
+        <p class="eyebrow">Veelgestelde vragen</p>
+        <h2 class="section-h2">Uw vragen beantwoord</h2>
+        <p class="faq-desc">Staat uw vraag er niet bij? Bel of mail ons — u krijgt snel een helder, eerlijk antwoord.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Hoe snel kan ik mijn rijbewijs terugkrijgen?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Dit hangt af van uw specifieke situatie, maar in urgente gevallen — zoals als u uw rijbewijs nodig heeft voor werk — is het in sommige gevallen mogelijk om al binnen een week uw rijbewijs terug te krijgen. Hoe eerder u actie onderneemt, hoe groter de kans op een snel resultaat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Wat kost een advocaat bij een ingevorderd rijbewijs?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>De kosten zijn afhankelijk van uw zaak en het type procedure. Tijdens het eerste gratis adviesgesprek geven wij u een heldere kostenopgave. Voldoet u aan de inkomenseisen? Dan kunt u mogelijk in aanmerking komen voor een gesubsidieerde advocaat (pro deo).</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Mijn rijbewijs is net ingevorderd — wat doe ik nú?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Handel direct. U heeft 10 dagen voordat de officier van justitie beslist over de inhouding. Start nu uw intake of bel direct. Hoe eerder een advocaat uw zaak bekijkt, hoe meer opties er zijn.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Wat is een klaagschrift procedure (Art. 552a Sv)?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Een klaagschrift is een officieel bezwaar bij de rechter-commissaris tegen de invordering van uw rijbewijs. Als de rechter oordeelt dat de invordering onterecht of disproportioneel is, wordt uw rijbewijs teruggegeven. Dit is een van de snelste routes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Is het gesprek met de advocaat echt gratis?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Ja. Het eerste oriënterende gesprek is altijd gratis en vrijblijvend. U beslist daarna zelf of en hoe u verder gaat. Eventuele kosten worden altijd vooraf met u besproken.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <img
+    src="images/highway-dusk.jpg"
+    alt="Nederlandse snelweg in de schemering met rode achterlichtsporen"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+    loading="lazy"
+  />
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,var(--color-ink-strong),color-mix(in oklab,var(--color-ink-strong) 80%,transparent),color-mix(in oklab,var(--color-ink-strong) 20%,transparent))" aria-hidden="true"></div>
+  <div style="position:absolute;inset:0;background:color-mix(in oklab,var(--color-ink-strong) 20%,transparent)" aria-hidden="true"></div>
+  <div class="cta-content">
+    <p class="eyebrow">Wacht niet af</p>
+    <h2 class="cta-h2">Rijbewijs kwijt? <span>Elke dag telt.</span></h2>
+    <p class="cta-desc">Hoe eerder u handelt, hoe meer opties er zijn. Start nu uw intake of bel direct — onze verkeersrechtadvocaat neemt vandaag nog contact op.</p>
+    <div class="cta-buttons">
+      <a class="btn-primary" href="#aanvraag">
+        Start intake
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a class="btn-outline" href="tel:0851234567">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        085 – 123 4567
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <p class="eyebrow">Direct contact</p>
+    <h2 class="section-h2">Neem contact op</h2>
+    <p class="contact-sub">Werkdagen 08:00–20:00, bij spoed ook 's avonds.</p>
+    <div class="contact-grid">
+      <a href="tel:0851234567" class="contact-card">
+        <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        <div class="contact-type">Telefonisch</div>
+        <div class="contact-note">Direct een mens spreken</div>
+        <div class="contact-value">085 – 123 4567</div>
+      </a>
+      <a href="mailto:info@geenbewijs.nl" class="contact-card">
+        <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <div class="contact-type">E-mail</div>
+        <div class="contact-note">Reactie binnen 4 uur</div>
+        <div class="contact-value">info@geenbewijs.nl</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="footer-logo" href="/">Geen<span>Bewijs</span>.nl</a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#">Privacybeleid</a>
+      <a href="#">Disclaimer</a>
+      <a href="#">Algemene voorwaarden</a>
+    </nav>
+    <p class="footer-copy">© 2025 GeenBewijs.nl — Alle rechten voorbehouden</p>
+  </div>
+</footer>
+
+<script>
+  // ===== MOBILE MENU =====
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const menuIcon = document.getElementById('menuIcon');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuIcon.textContent = isOpen ? '✕' : '☰';
+  });
+
+  // Close mobile nav when clicking a link
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuIcon.textContent = '☰';
+    });
+  });
+
+  // ===== MULTI-STEP FORM =====
+  let currentStep = 1;
+  const totalSteps = 3;
+
+  function goToStep(step) {
+    // Hide all steps
+    for (let i = 1; i <= totalSteps; i++) {
+      document.getElementById('formStep' + i).classList.remove('active');
+      document.getElementById('step-num-' + i).classList.remove('active');
+      document.getElementById('step-num-' + i).classList.add('inactive');
+      document.getElementById('step-label-' + i).classList.remove('active');
+      document.getElementById('step-label-' + i).classList.add('inactive');
+    }
+    // Activate current step
+    document.getElementById('formStep' + step).classList.add('active');
+    // Update indicators
+    for (let i = 1; i <= step; i++) {
+      document.getElementById('step-num-' + i).classList.remove('inactive');
+      document.getElementById('step-num-' + i).classList.add('active');
+      document.getElementById('step-label-' + i).classList.remove('inactive');
+      document.getElementById('step-label-' + i).classList.add('active');
+    }
+    currentStep = step;
+  }
+
+  function nextStep(from) {
+    if (from < totalSteps) {
+      goToStep(from + 1);
+    }
+  }
+
+  function prevStep(from) {
+    if (from > 1) {
+      goToStep(from - 1);
+    }
+  }
+
+  function submitForm() {
+    // Hide all steps and indicator, show success
+    for (let i = 1; i <= totalSteps; i++) {
+      document.getElementById('formStep' + i).classList.remove('active');
+    }
+    document.getElementById('stepsIndicator').style.display = 'none';
+
+    // Update step 4 (checkmark)
+    const step4num = document.getElementById('step-num-4');
+    step4num.classList.remove('inactive');
+    step4num.classList.add('active');
+    const step4label = document.getElementById('step-label-4');
+    step4label.classList.remove('inactive');
+    step4label.classList.add('active');
+
+    document.getElementById('formSuccess').classList.add('active');
+  }
+
+  // ===== FAQ ACCORDION =====
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ===== SCROLL ANIMATIONS =====
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.hiw-card, .why-feature, .result-row, .contact-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      observer.observe(el);
+    });
+  }
+</script>
+
+</body>
+</html>
